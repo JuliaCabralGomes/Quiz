@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Relâmpago</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+
+        <section class="quiz-app">
+
+            <h1>Quiz Relâmpago ⚡</h1>
+
+            <div id="quiz-content" class="quiz-content">
+
+                <!-- Estado: carregando -->
+                <div id="loading-state" class="state">
+
+                    <p class="loading-text">Carregando perguntas...</p>
+
+                </div>
+
+                <!-- Estado: erro -->
+                <div id="error-state" class="state hidden">
+
+                    <p class="error-text">Não foi possível carregar as perguntas. Verifique sua conexão.</p>
+
+                    <button id="retry-button" class="btn btn-primary" type="button">Tentar novamente</button>
+
+                </div>
+
+                <!-- Estado: pergunta -->
+                <div id="question-state" class="state hidden">
+
+                    <div class="quiz-meta">
+
+                        <span id="question-counter" class="badge"></span>
+                        <span id="score-counter" class="badge badge-pink"></span>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div id="progress-fill" class="progress-fill"></div>
+
+                    </div>
+
+                    <p id="question-category" class="question-category"></p>
+
+                    <h2 id="question-text" class="question-text"></h2>
+
+                    <div id="options-grid" class="options-grid"></div>
+
+                    <button id="next-button" class="btn btn-primary hidden" type="button">Próxima →</button>
+
+                </div>
+
+                <!-- Estado: resultado final -->
+                <div id="result-state" class="state hidden">
+
+                    <p class="result-emoji" id="result-emoji"></p>
+
+                    <h2 class="result-title">Resultado</h2>
+
+                    <p id="result-score" class="result-score"></p>
+
+                    <p id="result-message" class="result-message"></p>
+
+                    <button id="restart-button" class="btn btn-primary" type="button">Jogar novamente</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
